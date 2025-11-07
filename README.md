@@ -20,6 +20,7 @@ The PR2 transformation architecture is a serverless ETL pipeline which is built 
 ## PR2 Version 0.1 Notes for Controlled Tier. 
 - In order to make any changes to the codes. The codes will need to be pushed to GitHub for documentation purposes. 
 -- However, the code will also need to be updated in the DAG Airflow GCS bucket [PR2 Pipeline DAG Folder](https://console.cloud.google.com/storage/browser/us-central1-ccc-orchestrato-a82b22b0-bucket/dags;tab=objects?inv=1&invt=Ab3BcA&project=nih-nci-dceg-connect-prod-6d04&prefix=&forceOnObjectsSortingFiltering=false)
+--- NOTE: To access the DAG Airflow you need to ensure you have special permissions to gain access to it. Otherwise, the link above and directly below will NOT work. 
 - When the codes are updated, the DAG will need to be re-parsed within the DAG Airflow site before being run again. 
 - The SQL Queries are archived within this folder [pr2-pipeline-artifacts-prod](https://console.cloud.google.com/storage/browser/pr2-pipeline-artifacts-prod/sql;tab=objects?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&inv=1&invt=Ab3BcA&project=nih-nci-dceg-connect-prod-6d04&prefix=&forceOnObjectsSortingFiltering=false)
 -- However, where these SQL queries reside inside the pipeline is unknown. 
