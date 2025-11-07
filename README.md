@@ -318,7 +318,7 @@ erDiagram
         str commute_time
     }
 ```
-## PR2 0.1 Notes for Controlled Tier. 
+## PR2 Version 0.1 Notes for Controlled Tier. 
 - In order to make any changes to the codes. The codes will need to be pushed to GitHub for documentation purposes. 
 -- However, the code will also need to be updated in the DAG Airflow GCS bucket [PR2 Pipeline DAG Folder](https://console.cloud.google.com/storage/browser/us-central1-ccc-orchestrato-a82b22b0-bucket/dags;tab=objects?inv=1&invt=Ab3BcA&project=nih-nci-dceg-connect-prod-6d04&prefix=&forceOnObjectsSortingFiltering=false)
 - When the codes are updated, the DAG will need to be re-parsed within the DAG Airflow site before being run again. 
