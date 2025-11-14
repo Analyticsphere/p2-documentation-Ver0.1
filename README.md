@@ -25,7 +25,7 @@ The PR2 transformation architecture is a serverless ETL pipeline which is built 
 - When the codes are updated, the DAG will need to be re-parsed within the DAG Airflow site before being run again. 
 - The SQL Queries are archived within this folder [pr2-pipeline-artifacts-prod](https://console.cloud.google.com/storage/browser/pr2-pipeline-artifacts-prod/sql;tab=objects?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&inv=1&invt=Ab3BcA&project=nih-nci-dceg-connect-prod-6d04&prefix=&forceOnObjectsSortingFiltering=false)
 - FlatConnect tables were changed from Jake's previous tables identified as "JP" for the flattened tables created by Eddy. 
--- The changes were made in the "Source Table" class in the constants python file. Located in lines 32-48. 
+    - The changes were made in the "Source Table" class in the constants python file. Located in lines 32-48. 
 
 ## Architecture Diagram
 > *Note:* This currently just includes the cleaning transformations, not-deidentification or aggregations. Each additional transformation should be a new endpoint in the API and should be called from a new "task" in the Airflow DAG.
