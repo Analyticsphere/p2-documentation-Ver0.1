@@ -18,12 +18,12 @@ Core logic of the transformations will be implemented in Python, but the Python 
 The PR2 transformation architecture is a serverless ETL pipeline which is built on Google Cloud Platform that transforms Connect data from its raw form to a clean, standardized format for research purposes.
 
 ## PR2 Version 0.1 Notes for Controlled Tier. 
+- For detailed description of how to properly update PR2 Pipeline, please contact Analytics Team to obtain the documentation for updating the pipeline. 
 - In order to make any changes to the codes. The codes will need to be pushed to GitHub for documentation purposes. 
 -- However, the code will also need to be updated in the DAG Airflow GCS bucket [PR2 Pipeline DAG Folder](https://console.cloud.google.com/storage/browser/us-central1-ccc-orchestrato-a82b22b0-bucket/dags;tab=objects?inv=1&invt=Ab3BcA&project=nih-nci-dceg-connect-prod-6d04&prefix=&forceOnObjectsSortingFiltering=false)
     - NOTE: To access the DAG Airflow you need to ensure you have special permissions to gain access to it. Otherwise, the link above and directly below will NOT work. 
 - When the codes are updated, the DAG will need to be re-parsed within the DAG Airflow site before being run again. 
 - The SQL Queries are archived within this folder [pr2-pipeline-artifacts-prod](https://console.cloud.google.com/storage/browser/pr2-pipeline-artifacts-prod/sql;tab=objects?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&inv=1&invt=Ab3BcA&project=nih-nci-dceg-connect-prod-6d04&prefix=&forceOnObjectsSortingFiltering=false)
--- However, where these SQL queries reside inside the pipeline is unknown. 
 - FlatConnect tables were changed from Jake's previous tables identified as "JP" for the flattened tables created by Eddy. 
 -- The changes were made in the "Source Table" class in the constants python file. Located in lines 32-48. 
 
@@ -261,9 +261,9 @@ flowchart LR
     - join tables that have multiple versions
     - take care to use coalesce appropriately to combine mutual columns
     - take care to include columns unique to either source table in the target table
-- createControlledTier
+- createSensitiveTier
     - Takes the Clean Connect tables that resulted from the Clean Rows. 
-    - Filters them down to the Controlled Tier. 
+    - Filters them down to the Sensitive Tier.
 
 # Thoughts on the future state of PR2:
 
